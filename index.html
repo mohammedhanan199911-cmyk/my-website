@@ -3,59 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Web App | Antigravity</title>
+    <title>Modern Web App | Antigravity & Firebase</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">⚡ Antigravity App</div>
+        <div class="logo">⚡ Antigravity + 🔥 Firebase</div>
         <nav>
             <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#contact" class="btn-nav">Get Started</a>
+            <a href="#contact" class="btn-nav">Contact Us</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <span class="badge">🚀 Live Static Deployment</span>
-            <h1>Fast, Beautiful & Modern Website</h1>
-            <p>Built with Antigravity, version controlled via GitHub, and ready for lightning fast deployment.</p>
+            <span class="badge">🚀 Live Static + Cloud DB</span>
+            <h1>Fast, Beautiful & Connected Website</h1>
+            <p>Built with Antigravity, deployed with GitHub, and connected to Google Firebase Cloud Database.</p>
             <div class="hero-actions">
-                <button class="btn btn-primary" onclick="showMessage()">Click Me!</button>
+                <a href="#contact" class="btn btn-primary">Send a Message</a>
                 <a href="#features" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div id="status-card" class="status-card hidden">
-                🎉 Awesome! Your interactive website script is running smoothly.
             </div>
         </section>
 
         <section id="features" class="features">
-            <h2>Why This Architecture?</h2>
+            <h2>Core Features</h2>
             <div class="grid">
                 <div class="card">
                     <div class="icon">💻</div>
-                    <h3>Antigravity Powered</h3>
-                    <p>Designed and built locally in Antigravity with modern standards.</p>
+                    <h3>Antigravity Built</h3>
+                    <p>Clean modern HTML, CSS & Vanilla JS code built locally.</p>
                 </div>
                 <div class="card">
                     <div class="icon">🐙</div>
-                    <h3>GitHub Versioned</h3>
-                    <p>Every commit is tracked and stored securely in the cloud repository.</p>
+                    <h3>GitHub Pages</h3>
+                    <p>Continuous deployment directly from the GitHub repository.</p>
                 </div>
                 <div class="card">
-                    <div class="icon">⚡</div>
-                    <h3>Instant Deployment</h3>
-                    <p>Static pull integration makes serving fast, scalable, and ultra-secure.</p>
+                    <div class="icon">🔥</div>
+                    <h3>Firebase Database</h3>
+                    <p>Real-time Cloud Firestore saves submissions instantly in the cloud.</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Firebase Connected Contact Form -->
+        <section id="contact" class="contact-section">
+            <div class="form-container">
+                <h2>📬 Get In Touch</h2>
+                <p>Submit this form to test live Firebase Cloud Firestore data storage!</p>
+
+                <form id="contactForm">
+                    <div class="input-group">
+                        <label for="userName">Full Name</label>
+                        <input type="text" id="userName" placeholder="e.g. Mohammed Hanan" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="userEmail">Email Address</label>
+                        <input type="email" id="userEmail" placeholder="e.g. hanan@example.com" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="userMessage">Message</label>
+                        <textarea id="userMessage" rows="4" placeholder="Type your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-block">Send Message to Firebase</button>
+                </form>
+
+                <div id="formStatus" class="status-msg hidden"></div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Built with Antigravity. Ready for GitHub push.</p>
+        <p>© 2026 Built with Antigravity | Powered by Firebase</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Firebase SDK (v10 Modular via CDN) & Script -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
